@@ -641,13 +641,79 @@
     <div class="dock-text">
       <span id="dockNeededCount">28 items</span> needed • <strong id="dockHaveCount">0 ready</strong>
     </div>
-    <button class="dock-cart-btn" onclick="sendMissingToAmazon()">
-      🛒 Add Missing Items to Amazon Cart
+    <button class="dock-cart-btn" onclick="openMissingModal()">
+      🛍️ Shop Missing Items on Amazon
     </button>
     <button class="dock-print-btn" onclick="window.open(AMAZON_STOREFRONT_URL, '_blank')">
       ⭐ View Full Storefront
     </button>
   </div>
+
+  <!-- Interactive Missing Items Modal -->
+  <div id="missingModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.65); z-index:10000; align-items:center; justify-content:center; padding:16px; box-sizing:border-box;">
+    <div style="background:#fff; border-radius:18px; max-width:600px; width:100%; max-height:88vh; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.3); animation:modalPop 0.25s ease;">
+      <div style="padding:20px 24px; border-bottom:1.5px solid #ece6de; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="font-family:'Playfair Display',serif; font-size:20px; color:#2b2623; margin:0 0 4px;">Items Still Needed for Your Birth Bag</h3>
+          <p style="font-size:12.5px; color:#6e6761; margin:0;" id="modalSubtitle">Select any item to open directly on Amazon with verified clean specifications.</p>
+        </div>
+        <button onclick="closeMissingModal()" style="background:#f5f0ea; border:none; width:32px; height:32px; border-radius:50%; font-size:16px; cursor:pointer; color:#6e6761; display:flex; align-items:center; justify-content:center;">✕</button>
+      </div>
+
+      <div id="modalListContainer" style="padding:16px 24px; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:10px;">
+        <!-- Populated via JS -->
+      </div>
+
+      <div style="padding:16px 24px; background:#faf8f5; border-top:1.5px solid #ece6de; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+        <span style="font-size:11.5px; color:#888;">All links open with verified Amazon affiliate tracking (andiphoto-20)</span>
+        <button onclick="openAllNeededTabs()" style="background:#b66d4f; color:#fff; border:none; padding:10px 20px; border-radius:50px; font-size:13px; font-weight:700; cursor:pointer;">
+          ⚡ Open First 5 Needed on Amazon
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes modalPop {
+      from { transform: scale(0.94); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border: 1px solid #ece6de;
+      border-radius: 10px;
+      background: #fff;
+      transition: background 0.2s;
+    }
+    .modal-item-row:hover {
+      background: #faf8f5;
+    }
+    .modal-btn-buy {
+      background: #ffecd1;
+      border: 1px solid #fbd29c;
+      color: #2b2623;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .modal-btn-buy:hover {
+      background: #ff9900;
+      color: #fff;
+      border-color: #ff9900;
+    }
+  </style>
+
 </div>
 
 <script>
@@ -1086,23 +1152,61 @@
   }
 
   // Multi-Item Amazon Cart Redirection Engine
-  function sendMissingToAmazon() {
+  
+  // Interactive Missing Items Modal System
+  function openMissingModal() {
     const neededItems = CHECKLIST_ITEMS.filter(it => !state.checked[it.id] && it.asin);
+    const container = document.getElementById("modalListContainer");
+    const sub = document.getElementById("modalSubtitle");
+
     if (neededItems.length === 0) {
       alert("🎉 Incredible! You've packed every item on your checklist. You're ready for birth!");
       return;
     }
 
-    // Build Amazon Multi-Item Cart URL
-    // Format: https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=TAG&ASIN.1=...&Quantity.1=1&...
-    let cartUrl = `https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=${AMAZON_AFFILIATE_TAG}`;
-    neededItems.slice(0, 15).forEach((item, idx) => {
-      const num = idx + 1;
-      cartUrl += `&ASIN.${num}=${item.asin}&Quantity.${num}=1`;
-    });
+    sub.innerText = `You have ${neededItems.length} items left to pack. Click any item to view on Amazon.`;
 
-    window.open(cartUrl, "_blank");
+    container.innerHTML = neededItems.map(it => {
+      const affLink = `https://www.amazon.com/dp/${it.asin}?tag=${AMAZON_AFFILIATE_TAG}`;
+      return `
+        <div class="modal-item-row">
+          <div style="flex:1;">
+            <div style="font-size:13px; font-weight:700; color:#2b2623;">${it.name}</div>
+            <div style="font-size:11px; color:#5d6d52; margin-top:2px;">${it.cleanText}</div>
+          </div>
+          <a href="${affLink}" target="_blank" rel="noopener" class="modal-btn-buy" onclick="markItemPacked('${it.id}')">
+            View on Amazon →
+          </a>
+        </div>
+      `;
+    }).join("");
+
+    const m = document.getElementById("missingModal");
+    m.style.display = "flex";
   }
+
+  function closeMissingModal() {
+    document.getElementById("missingModal").style.display = "none";
+  }
+
+  function markItemPacked(id) {
+    // When mom clicks View on Amazon, we can keep or leave it
+  }
+
+  function openAllNeededTabs() {
+    const neededItems = CHECKLIST_ITEMS.filter(it => !state.checked[it.id] && it.asin);
+    if (!neededItems.length) return;
+    const batch = neededItems.slice(0, 5);
+    batch.forEach(it => {
+      const affLink = `https://www.amazon.com/dp/${it.asin}?tag=${AMAZON_AFFILIATE_TAG}`;
+      window.open(affLink, "_blank");
+    });
+  }
+
+  window.openMissingModal = openMissingModal;
+  window.closeMissingModal = closeMissingModal;
+  window.openAllNeededTabs = openAllNeededTabs;
+
 
   // Render Items into DOM
   function renderItems() {
