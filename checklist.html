@@ -756,6 +756,12 @@
   const AMAZON_STOREFRONT_URL = "https://www.amazon.com/shop/andiphotoandfilm"; // Your Amazon Storefront / Idea List
 
   // MASTER CHECKLIST DATABASE (Clean & Naturalistic)
+    const ITEM_IMAGES = {"amber_fairy_lights": "amber_fairy_lights.jpg", "bamboo_nursing_pads": "bamboo_nursing_pads.jpg", "birth_comb": "birth_comb.jpg", "birth_plan_copies": "birth_plan_copies.svg", "bluetooth_speaker": "bluetooth_speaker.jpg", "chux_pads": "chux_pads.svg", "clean_diapers": "clean_diapers.png", "earth_mama_nipple_butter": "earth_mama_nipple_butter.jpg", "earth_mama_spray": "earth_mama_spray.jpg", "fitted_waterproof_sheet": "fitted_waterproof_sheet.svg", "long_charger": "long_charger.jpg", "natracare_pads": "natracare_pads.jpg", "organic_bamboo_robe": "organic_bamboo_robe.jpg", "organic_coconut_balm": "organic_coconut_balm.jpg", "organic_eo_roller": "organic_eo_roller.jpg", "organic_kimono_onesies": "organic_kimono_onesies.jpg", "organic_muslin_swaddles": "organic_muslin_swaddles.jpg", "organic_sitz_herbs": "organic_sitz_herbs.jpg", "organic_underwear": "organic_underwear.svg", "photo_readiness_note": "photo_readiness_note.svg", "portable_fan": "portable_fan.svg", "raw_honey_sticks": "raw_honey_sticks.jpg", "relyte_electrolytes": "relyte_electrolytes.jpg", "silverette_cups": "silverette_cups.jpg", "slow_cooker": "slow_cooker.svg", "straw_cup": "straw_cup.jpg", "upside_down_peri": "upside_down_peri.jpg", "waterwipes": "waterwipes.png"};
+  function getItemImgUrl(id) {
+    const file = ITEM_IMAGES[id] || (id + '.svg');
+    return '/assets/items/' + file;
+  }
+
   const CHECKLIST_ITEMS = [
     // 1. Labor & Oxytocin Comfort
     {
@@ -1233,7 +1239,7 @@
         : `https://www.amazon.com/s?k=${searchQ}&tag=${AMAZON_AFFILIATE_TAG}`;
       return `
         <div class="modal-item-row">
-          <img src="/assets/items/${it.id}.svg" class="modal-thumb" alt="${it.name}" />
+          <img src="${getItemImgUrl(it.id)}" class="modal-thumb" alt="${it.name}" onerror="this.src='/assets/items/' + it.id + '.svg'" />
           <div style="flex:1;">
             <div style="font-size:13px; font-weight:700; color:#2b2623;">${it.name}</div>
             <div style="font-size:11px; color:#5d6d52; margin-top:2px;">${it.cleanText}</div>
@@ -1316,7 +1322,7 @@
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
             <div class="item-thumb-wrap">
-              <img src="/assets/items/${it.id}.svg" alt="${it.name}" class="item-thumb-img" loading="lazy" />
+              <img src="${getItemImgUrl(it.id)}" alt="${it.name}" class="item-thumb-img" loading="lazy" onerror="this.src='/assets/items/' + it.id + '.svg'" />
             </div>
             <div class="item-details" onclick="toggleItem('${it.id}')" style="cursor:pointer;">
               <span class="item-tag ${it.tag}">${it.tagLabel}</span>
