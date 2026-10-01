@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/quiz"
+  to = "/quiz.html"
+  status = 200
+
+[[redirects]]
+  from = "/checklist"
+  to = "/checklist.html"
+  status = 200
+
+[[redirects]]
+  from = "/directory"
+  to = "/directory.html"
+  status = 200
+
+[[redirects]]
+  from = "/advertise"
+  to = "/advertise.html"
+  status = 200
+
+[[redirects]]
+  from = "/get-listed"
+  to = "/advertise.html"
+  status = 200

@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Which Utah Birth Place Fits You? | Matcher Quiz</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --site-bg: #FAF8F5;
+      --site-card: #FFFFFF;
+      --site-dark: #2B2623;
+      --site-muted: #6E6761;
+      --site-terra: #B66D4F;
+      --site-terra-dark: #9E5B3F;
+      --site-terra-light: #F8ECE5;
+      --site-olive: #5B6F56;
+      --site-olive-light: #EEF2EC;
+      --site-border: #ECE6DE;
+      --site-shadow: 0 6px 20px rgba(43, 38, 35, 0.05);
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background-color: var(--site-bg);
+      color: var(--site-dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .site-header {
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1.5px solid var(--site-border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 20px;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-brand {
+      text-decoration: none;
+      color: var(--site-dark);
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-sub {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--site-terra);
+    }
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--site-dark);
+      line-height: 1.2;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--site-muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: var(--site-dark);
+      background: #ECE5DC;
+    }
+    .nav-cta {
+      background: var(--site-terra);
+      color: #fff !important;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 3px 10px rgba(182, 109, 79, 0.25);
+    }
+    .nav-cta:hover {
+      background: var(--site-terra-dark);
+      transform: translateY(-1px);
+    }
+    .site-footer {
+      background: #231F1D;
+      color: #ECE5DC;
+      padding: 48px 20px 32px;
+      margin-top: 60px;
+      border-top: 1px solid #3A3430;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media(min-width: 768px) {
+      .footer-inner {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #FFF;
+    }
+    .footer-col p {
+      font-size: 13px;
+      color: #B5ACA3;
+      line-height: 1.6;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links a {
+      color: #ECE5DC;
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #FFA585;
+    }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 36px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #3A3430;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: #8C827A;
+    }
+  </style>
+
+  <style>
+    
+    :root {
+      --sand-bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --terracotta: #B66D4F;
+      --terracotta-dark: #9E5B3F;
+      --terracotta-light: #F8ECE5;
+      --gold-accent: #C29D6D;
+      --sage-green: #5B6F56;
+      --sage-light: #EEF2EC;
+      --blue-accent: #2B7094;
+      --blue-light: #E4F0F6;
+      --text-dark: #2B2623;
+      --text-muted: #6E6761;
+      --border-color: #ECE6DE;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 50px;
+      --shadow-soft: 0 4px 20px rgba(43, 38, 35, 0.06);
+      --shadow-hover: 0 8px 30px rgba(182, 109, 79, 0.14);
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--sand-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+    }
+
+    .widget-container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .quiz-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      background: var(--terracotta-light);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 10px;
+    }
+
+    .quiz-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .quiz-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .mode-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 auto 24px;
+      background: #EEE8E0;
+      padding: 4px;
+      border-radius: var(--radius-pill);
+      width: fit-content;
+    }
+
+    .mode-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .mode-btn.active {
+      background: #FFF;
+      color: var(--text-dark);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .progress-bar-container {
+      height: 6px;
+      background: #E9E3DA;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--terracotta);
+      width: 16.66%;
+      transition: width 0.35s ease;
+    }
+
+    .quiz-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: clamp(20px, 4vw, 36px);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .step-indicator {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-accent);
+      margin-bottom: 6px;
+    }
+
+    .question-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(20px, 3.5vw, 26px);
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .question-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 600px) {
+      .options-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .option-btn {
+      background: #FAF8F6;
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .option-btn:hover {
+      border-color: var(--gold-accent);
+      background: #FFFFFF;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .option-btn.selected {
+      border-color: var(--terracotta);
+      background: #FFF8F5;
+      box-shadow: 0 0 0 1px var(--terracotta);
+    }
+
+    .option-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .option-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .lead-step-container {
+      margin-bottom: 20px;
+    }
+
+    .lead-form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .lead-form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .field-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .field-label .required {
+      color: var(--terracotta);
+    }
+
+    .field-input {
+      padding: 9px 12px;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-family: inherit;
+      background: #FAF8F6;
+      transition: var(--transition);
+    }
+
+    .field-input:focus {
+      outline: none;
+      border-color: var(--terracotta);
+      background: #FFF;
+      box-shadow: 0 0 0 2px var(--terracotta-light);
+    }
+
+    .field-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .privacy-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      background: #F7F4EE;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .nav-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: #FFF;
+      border: none;
+      padding: 11px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .result-view {
+      display: none;
+    }
+
+    .match-banner {
+      background: var(--sage-light);
+      border: 1px solid #D4E0D0;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
+      color: #2B3D28;
+    }
+
+    .match-banner-title {
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .match-banner-sub {
+      font-size: 12px;
+      color: #496345;
+    }
+
+    .match-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 680px) {
+      .match-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .hospital-card {
+      background: #FFF;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+    }
+
+    .hospital-card.primary-match {
+      border-color: var(--terracotta);
+      box-shadow: 0 8px 24px rgba(182, 109, 79, 0.12);
+    }
+
+    .primary-badge {
+      position: absolute;
+      top: -10px;
+      right: 14px;
+      background: var(--terracotta);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hospital-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .hospital-city {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .hospital-site-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--terracotta);
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .hospital-site-link:hover {
+      text-decoration: underline;
+    }
+
+    .spec-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .spec-tag {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 4px;
+      background: #F2EEE8;
+      color: var(--text-dark);
+    }
+
+    .spec-tag.highlight {
+      background: var(--terracotta-light);
+      color: var(--terracotta);
+    }
+
+    .spec-tag.vbac-tag {
+      background: #E8F2E6;
+      color: #2E5C26;
+      font-weight: 700;
+    }
+
+    .hospital-pros {
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hospital-pros li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .hospital-pros li::before {
+      content: "✓";
+      color: var(--sage-green);
+      font-weight: bold;
+    }
+
+    .cassidee-tip {
+      background: #FCF8F2;
+      border-left: 3px solid var(--gold-accent);
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #5A4F44;
+      border-radius: 0 6px 6px 0;
+      margin-top: 6px;
+    }
+
+    .cassidee-tip strong {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .consult-box {
+      background: var(--text-dark);
+      color: #FFF;
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .consult-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 19px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .consult-sub {
+      font-size: 12.5px;
+      color: #CFC7C0;
+      margin-bottom: 14px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .consult-btn {
+      background: var(--terracotta);
+      color: #FFF;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 12.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .consult-btn:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-1px);
+    }
+
+    .compare-view {
+      display: none;
+    }
+
+    .table-lead-bar {
+      background: #F5EFE6;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    @media (min-width: 760px) {
+      .table-lead-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .table-lead-title {
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .table-lead-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .table-lead-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .table-lead-input {
+      padding: 6px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      background: #FFF;
+      font-family: inherit;
+    }
+
+    .table-lead-btn {
+      background: var(--terracotta);
+      color: #FFF;
+      border: none;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .filter-pill {
+      background: #F0EBE2;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .filter-pill.active {
+      background: var(--text-dark);
+      color: #FFF;
+      border-color: var(--text-dark);
+    }
+
+    .search-box {
+      padding: 5px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      background: #FFF;
+      min-width: 170px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: #FFF;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      text-align: left;
+    }
+
+    .compare-table th, .compare-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    .compare-table th {
+      background: #F7F4EE;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 12px;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .compare-table tr:hover {
+      background: #FAF8F5;
+    }
+
+    .hospital-name-link {
+      color: var(--text-dark);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hospital-name-link:hover {
+      color: var(--terracotta);
+      text-decoration: underline;
+    }
+
+    .pill-check {
+      display: inline-block;
+      background: var(--sage-light);
+      color: var(--sage-green);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5px;
+    }
+
+    .pill-water {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue-accent);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5px;
+    }
+
+    .pill-vbac {
+      display: inline-block;
+      background: #E8F2E6;
+      color: #2E5C26;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5px;
+    }
+
+    .pill-vbac-midwife {
+      display: inline-block;
+      background: #FFF4E5;
+      color: #8C5209;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5px;
+    }
+
+    .vbac-sub {
+      font-size: 10px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .stars {
+      color: var(--gold-accent);
+      letter-spacing: 1px;
+      font-size: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-sub">Curated by Andi Photo + Film</span>
+      <span class="brand-title">Utah Maternity & Birth Guide</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item ">Home</a>
+      <a href="quiz.html" class="nav-item active">Birth Place Quiz</a>
+      <a href="checklist.html" class="nav-item ">Packing Checklist</a>
+      <a href="directory.html" class="nav-item ">Provider Directory</a>
+      <a href="advertise.html" class="nav-cta">Advertise / Get Listed ✨</a>
+    </nav>
+  </div>
+</header>
+
+  
+  <div class="widget-container" id="abm">
+    <div class="quiz-header">
+      <span class="quiz-tag">Utah Maternity Directory & Matcher</span>
+      <h1 class="quiz-title">Which Utah Birth Place Fits You?</h1>
+      <p class="quiz-subtitle">Answer 5 quick questions for your personalized match, or compare all 26 Utah hospitals and birth centers.</p>
+    </div>
+
+    <div class="mode-nav">
+      <button class="mode-btn active" id="abm-mode-quiz" onclick="abmSwitchMode('quiz')">Match Quiz</button>
+      <button class="mode-btn" id="abm-mode-compare" onclick="abmSwitchMode('compare')">Compare All 26 Locations</button>
+    </div>
+
+    <!-- QUIZ VIEW -->
+    <div id="abm-quiz-wrapper">
+      <div class="progress-bar-container" id="abm-progress-bar-container">
+        <div class="progress-bar" id="abm-progress-bar"></div>
+      </div>
+
+      <div class="quiz-card" id="abm-quiz-card">
+        <div class="step-indicator" id="abm-step-label">Question 1 of 5</div>
+        <h2 class="question-title" id="abm-question-text">Loading question...</h2>
+        <p class="question-desc" id="abm-question-sub"></p>
+
+        <div class="options-grid" id="abm-options-container"></div>
+
+        <!-- Step 6 Lead Capture -->
+        <div class="lead-step-container" id="abm-lead-step-container" style="display: none;">
+          <div class="lead-form-grid">
+            <div class="field-group">
+              <label class="field-label" for="abm-client-name">Your Full Name <span class="required">*</span></label>
+              <input type="text" id="abm-client-name" class="field-input" placeholder="e.g. Cassidee Anderson" required oninput="abmValidateLeadStep()">
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="abm-client-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="abm-client-email" class="field-input" placeholder="e.g. mama@example.com" required oninput="abmValidateLeadStep()">
+              <span class="field-hint">Your match report & packing checklist are sent here.</span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="abm-client-due-date">Estimated Due Date <span class="required">*</span></label>
+              <input type="text" id="abm-client-due-date" class="field-input" placeholder="e.g. November 2026" required oninput="abmValidateLeadStep()">
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="abm-client-phone">Cell Phone (Optional)</label>
+              <input type="tel" id="abm-client-phone" class="field-input" placeholder="e.g. (801) 555-0123">
+              <span class="field-hint">Used only for due-date availability notifications.</span>
+            </div>
+          </div>
+          <div class="privacy-badge">
+            <span>🔒</span>
+            <span>Privacy protected. No spam ever. Personally prepared by Cassidee.</span>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-secondary" id="abm-btn-back" onclick="abmPrevQuestion()" style="visibility: hidden;">← Back</button>
+          <button class="btn-primary" id="abm-btn-next" onclick="abmNextQuestion()" disabled>Next Question →</button>
+        </div>
+      </div>
+
+      <!-- RESULTS VIEW -->
+      <div class="result-view" id="abm-result-view">
+        <div class="match-banner" id="abm-match-banner">
+          <div class="match-banner-title">
+            <span>✨</span>
+            <span id="abm-banner-title-text">Personalized Match Ready</span>
+          </div>
+          <div class="match-banner-sub" id="abm-banner-sub-text"></div>
+        </div>
+
+        <div class="match-grid" id="abm-match-cards-container"></div>
+
+        <div class="consult-box">
+          <h3 class="consult-title" id="abm-consult-title">Ready to chat about your birth team?</h3>
+          <p class="consult-sub" id="abm-consult-sub">Cassidee offers continuous doula support and documentary birth photo & film across Utah.</p>
+          <a href="https://andiphotoandfilm.com/contact" id="abm-consult-btn-link" target="_blank" class="consult-btn">
+            <span>Check On-Call Due Date Availability →</span>
+          </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 18px;">
+          <button class="btn-secondary" onclick="abmRestartQuiz()">↺ Retake Match Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARE DIRECTORY VIEW -->
+    <div class="compare-view" id="abm-compare-wrapper">
+      <div class="table-lead-bar">
+        <div class="table-lead-text">
+          <div class="table-lead-title"><span>📥</span> Printable 2026 Utah Maternity Directory (PDF)</div>
+          <div class="table-lead-desc">Direct labor ward phone numbers, VBAC policies, NICU levels & photography guidelines.</div>
+        </div>
+        <form class="table-lead-form" onsubmit="abmHandleTableLeadSubmit(event)">
+          <input type="text" class="table-lead-input" placeholder="Your Name" required id="abm-table-lead-name">
+          <input type="email" class="table-lead-input" placeholder="Your Email Address" required id="abm-table-lead-email">
+          <button type="submit" class="table-lead-btn" id="abm-table-lead-btn">Send PDF</button>
+        </form>
+      </div>
+      <div id="abm-table-lead-success" style="display: none; background: #EEF2EC; color: #2E492B; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 12px; font-weight: 600;">
+        ✓ Success! The 2026 Directory PDF has been sent to your email.
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-pills" id="abm-filter-pills">
+          <button class="filter-pill active" onclick="abmFilterCounty('All')">All (26)</button>
+          <button class="filter-pill" onclick="abmFilterCounty('Allows VBAC')">Allows VBAC (21)</button>
+          <button class="filter-pill" onclick="abmFilterCounty('Utah County')">Utah County (8)</button>
+          <button class="filter-pill" onclick="abmFilterCounty('Salt Lake County')">Salt Lake County (10)</button>
+          <button class="filter-pill" onclick="abmFilterCounty('Davis & Weber')">Davis & Weber (5)</button>
+          <button class="filter-pill" onclick="abmFilterCounty('Birth Center')">Birth Centers (5)</button>
+        </div>
+        <input type="text" class="search-box" id="abm-table-search" placeholder="Search hospital, city, or VBAC..." oninput="abmHandleTableSearch(this.value)">
+      </div>
+
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Hospital / Birth Place</th>
+              <th>Location & County</th>
+              <th>VBAC Support</th>
+              <th>NICU Level</th>
+              <th>Labor Tubs</th>
+              <th>Doula & Photo Rules</th>
+            </tr>
+          </thead>
+          <tbody id="abm-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const allVenues = [
+  {
+    "id": "uvh",
+    "name": "Utah Valley Hospital",
+    "system": "Intermountain Health",
+    "city": "Provo, UT",
+    "county": "Utah County",
+    "isBirthCenter": false,
+    "nicu": "Level III (55 Beds)",
+    "tubs": "Private Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (24/7 In-House OB & Anesthesia)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Doulas recognized as essential care team; telemetry available",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Unrestricted L&D; OR allowed with OB clearance",
+    "tip": "Ask for a soaking tub immediately upon admitting\u2014first-come, first-served! Magnificent mountain views.",
+    "url": "https://intermountainhealthcare.org/locations/utah-valley-hospital"
+  },
+  {
+    "id": "afh",
+    "name": "American Fork Hospital",
+    "system": "Intermountain Health",
+    "city": "American Fork, UT",
+    "county": "Utah County",
+    "isBirthCenter": false,
+    "nicu": "Level II (4 Beds)",
+    "tubs": "Soaking Tubs in Select Suites",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (TOLAC Supported)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Warm community nurse team; doula-friendly labor environment",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Exceptional natural window light; great for Fresh 48 photos",
+    "tip": "Calm community feel with warm nursing staff and exceptional natural window lighting for Fresh 48 sessions.",
+    "url": "https://intermountainhealthcare.org/locations/american-fork-hospital"
+  },
+  {
+    "id": "timpanogos",
+    "name": "Timpanogos Regional Hospital",
+    "system": "MountainStar Healthcare",
+    "city": "Orem, UT",
+    "county": "Utah County",
+    "isBirthCenter": false,
+    "nicu": "Level III (24 Beds)",
+    "tubs": "Labor Tubs Available",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Level III Surgical Backup)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Supportive nursing team; welcome certified doulas",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Standard low-light guidelines; respectful photo policy",
+    "tip": "High-level NICU in central Utah County with dedicated pediatric specialists on-site 24/7.",
+    "url": "https://mountainstar.com/locations/timpanogos-regional-hospital"
+  },
+  {
+    "id": "spanish_fork",
+    "name": "Spanish Fork Hospital",
+    "system": "Intermountain Health",
+    "city": "Spanish Fork, UT",
+    "county": "Utah County",
+    "isBirthCenter": false,
+    "nicu": "Level II Care",
+    "tubs": "Modern Labor Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Modern L&D Suites)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Modern, open philosophy; spacious birth suites",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Spacious modern layout with abundant natural lighting",
+    "tip": "Brand-new, state-of-the-art facility opened in 2021 with spacious modern labor rooms.",
+    "url": "https://intermountainhealthcare.org/locations/spanish-fork-hospital"
+  },
+  {
+    "id": "mountainview",
+    "name": "Mountain View Hospital",
+    "system": "MountainStar Healthcare",
+    "city": "Payson, UT",
+    "county": "Utah County",
+    "isBirthCenter": false,
+    "nicu": "Level II",
+    "tubs": "Labor Showers & Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Provider Dependent)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Doula friendly; quiet community hospital pace",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Warm family postpartum rooms; photography welcomed",
+    "tip": "The primary delivery hub for south Utah County (Spanish Fork, Salem, Payson, Santaquin).",
+    "url": "https://mountainstar.com/locations/mountain-view-hospital"
+  },
+  {
+    "id": "freya",
+    "name": "Freya Birth & Wellness",
+    "system": "Independent Birth Center",
+    "city": "Orem / Provo, UT",
+    "county": "Utah County",
+    "isBirthCenter": true,
+    "nicu": "None (Planned Hospital Backup)",
+    "tubs": "Full Water Birth Delivery",
+    "waterBirth": true,
+    "vbac": "Case-by-Case (Midwifery Criteria)",
+    "vbacAllowed": false,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Midwifery partnership; doulas deeply cherished",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Complete artistic freedom; atmospheric low-light birth photos",
+    "tip": "Trusted Utah County community midwifery team with deep roots in natural physiological birth and doula collaboration.",
+    "url": "https://freyabirthandwellness.com"
+  },
+  {
+    "id": "betterbirth",
+    "name": "Better Birth Center",
+    "system": "Free-standing Birth Center",
+    "city": "Orem, UT",
+    "county": "Utah County",
+    "isBirthCenter": true,
+    "nicu": "None (Planned Hospital Backup)",
+    "tubs": "Full Water Birth Tubs",
+    "waterBirth": true,
+    "vbac": "Case-by-Case (Clinical Screening)",
+    "vbacAllowed": false,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Doulas fully integrated into birth suites",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Warm candlelit ambiance; cinematic photography",
+    "tip": "Longstanding Utah birth center providing unmedicated birth suites with full freedom to move and water delivery.",
+    "url": "https://betterbirthcenter.com"
+  },
+  {
+    "id": "utahbirthsuites",
+    "name": "Utah Birth Suites",
+    "system": "Independent Birth Center",
+    "city": "Provo / Orem, UT",
+    "county": "Utah County",
+    "isBirthCenter": true,
+    "nicu": "None (Planned Hospital Backup)",
+    "tubs": "Full Water Birth Delivery",
+    "waterBirth": true,
+    "vbac": "Case-by-Case (Midwife Consult)",
+    "vbacAllowed": false,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Doula-led practice founded by certified doula trainers",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Complete artistic freedom in home-like birth suites",
+    "tip": "Founded by midwives and certified doula trainers on the Provo/Orem border. Warm, intimate birth suites designed for water birth.",
+    "url": "https://utahbirthsuites.com"
+  },
+  {
+    "id": "imc",
+    "name": "Intermountain Medical Center (IMC)",
+    "system": "Intermountain Health Flagship",
+    "city": "Murray, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level III (48 Beds)",
+    "tubs": "Tubs in Select Rooms",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Flagship TOLAC Leader / High Volume)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Doulas welcomed as essential; wireless telemetry standard",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Dimmable zone lighting; excellent ambient photo options",
+    "tip": "Flagship emergency backup. Independent dimmable lighting zones in every room make ambient photography look incredible.",
+    "url": "https://intermountainhealthcare.org/locations/intermountain-medical-center"
+  },
+  {
+    "id": "uofu",
+    "name": "University of Utah Hospital",
+    "system": "U of U Health",
+    "city": "Salt Lake City, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level III/IV (55 Beds)",
+    "tubs": "Deep Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Academic MFM Specialists / High Success)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Doula & Midwife supportive; hospital CNM program",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "High-tech birth suites; respectful sterile field rules",
+    "tip": "Premier academic medical center. Exceptional high-risk readiness and certified nurse-midwife hospital service.",
+    "url": "https://healthcare.utah.edu/womens-health"
+  },
+  {
+    "id": "stmarks",
+    "name": "St. Mark's Hospital",
+    "system": "MountainStar Healthcare",
+    "city": "Millcreek / SLC, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level III (32 Beds)",
+    "tubs": "Labor Tubs Available",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Collaborative OB/Midwife Teams)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Family-centered nursing care; very open to birth plans",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Natural daylight rooms; birth photography welcomed",
+    "tip": "Utah's first hospital with a rich history in maternity care, offering an unhurried family-centered labor floor.",
+    "url": "https://mountainstar.com/locations/st-marks-hospital"
+  },
+  {
+    "id": "lonepeak",
+    "name": "Lone Peak Hospital",
+    "system": "MountainStar Healthcare",
+    "city": "Draper, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level II (4 Beds)",
+    "tubs": "Labor Tubs in Suites",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (OB Dependent)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Supportive staff; peaceful south Salt Lake County location",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Intimate boutique feel; great natural light",
+    "tip": "Convenient point-of-the-mountain location. Easy access for both Salt Lake and Utah County families.",
+    "url": "https://mountainstar.com/locations/lone-peak-hospital"
+  },
+  {
+    "id": "riverton",
+    "name": "Riverton Hospital",
+    "system": "Intermountain Health",
+    "city": "Riverton, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level II (9 Beds)",
+    "tubs": "Private Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (TOLAC Supported)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Extremely doula friendly; supportive nurse culture",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Modern daylight suites; quiet uncrowded units",
+    "tip": "Serving southwest Salt Lake County (South Jordan, Herriman, Riverton). Clean, quiet, and very doula-supportive.",
+    "url": "https://intermountainhealthcare.org/locations/riverton-hospital"
+  },
+  {
+    "id": "altaview",
+    "name": "Alta View Hospital",
+    "system": "Intermountain Health",
+    "city": "Sandy, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level II (5 Beds)",
+    "tubs": "Modern Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Community Setting)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Boutique community feel; highly receptive to doulas",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Stunning mountain views; gorgeous east-facing light",
+    "tip": "Modernized maternity center with a boutique community feel at the base of the Wasatch Range.",
+    "url": "https://intermountainhealthcare.org/locations/alta-view-hospital"
+  },
+  {
+    "id": "ldshospital",
+    "name": "LDS Hospital",
+    "system": "Intermountain Health",
+    "city": "Salt Lake City, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level II (12 Beds)",
+    "tubs": "Labor Showers & Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Provider Dependent)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Calm Avenues atmosphere; peaceful postpartum units",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Classic warm lighting; respectful hospital guidelines",
+    "tip": "Located in the historic Avenues neighborhood of Salt Lake City, offering peaceful, personalized birth care.",
+    "url": "https://intermountainhealthcare.org/locations/lds-hospital"
+  },
+  {
+    "id": "jordanvalley",
+    "name": "Holy Cross Hospital - Jordan Valley",
+    "system": "CommonSpirit Health",
+    "city": "West Jordan, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": false,
+    "nicu": "Level III (11 Beds)",
+    "tubs": "Labor Tubs Available",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Full Surgical Backup)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Supportive team; comfortable labor rooms",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Spacious L&D rooms; good family space",
+    "tip": "Full-service West Jordan delivery center with Level III NICU support.",
+    "url": "https://www.commonspirit.org/locations/holy-cross-hospital-jordan-valley"
+  },
+  {
+    "id": "birthcenter",
+    "name": "The Birth Center",
+    "system": "Free-standing Birth Center",
+    "city": "Salt Lake City / Murray, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": true,
+    "nicu": "None (Planned Hospital Backup)",
+    "tubs": "Full Water Birth Delivery",
+    "waterBirth": true,
+    "vbac": "Case-by-Case (Midwife Evaluation)",
+    "vbacAllowed": false,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Ideal doula sanctuary; full freedom for comfort measures",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Atmospheric dim lighting; documentary photo freedom",
+    "tip": "Delivering directly in the birth pool is fully supported. Unrestricted freedom for doula comfort measures and documentary filming.",
+    "url": "https://thebirthcenter.org"
+  },
+  {
+    "id": "wasatch",
+    "name": "Wasatch Midwifery + Wellness",
+    "system": "Independent Birth Center",
+    "city": "Salt Lake City, UT",
+    "county": "Salt Lake County",
+    "isBirthCenter": true,
+    "nicu": "None (Planned Hospital Backup)",
+    "tubs": "Full Water Birth Delivery",
+    "waterBirth": true,
+    "vbac": "Case-by-Case (Clinical Screening)",
+    "vbacAllowed": false,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Holistic physiological birth; partner & doula focused",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Breathtaking home aesthetic; stunning natural window light",
+    "tip": "Holistic sanctuary focused on physiological birth and partner involvement. The warm aesthetic photographs breathtakingly.",
+    "url": "https://wasatchmidwifery.com"
+  },
+  {
+    "id": "layton",
+    "name": "Layton Hospital",
+    "system": "Intermountain Health",
+    "city": "Layton, UT",
+    "county": "Davis County",
+    "isBirthCenter": false,
+    "nicu": "Level II (6 Beds)",
+    "tubs": "Modern Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (TOLAC Supported)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Progressive nurse team; telemetry monitoring",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Ultra-modern daylight suites with large windows",
+    "tip": "Brand-new, cutting-edge hospital serving central Davis County with ultra-modern birth suites.",
+    "url": "https://intermountainhealthcare.org/locations/layton-hospital"
+  },
+  {
+    "id": "davis",
+    "name": "Holy Cross Hospital - Davis",
+    "system": "CommonSpirit Health",
+    "city": "Layton, UT",
+    "county": "Davis County",
+    "isBirthCenter": false,
+    "nicu": "Level III (16 Beds)",
+    "tubs": "Labor Tubs & Spa Comfort",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Level III Surgical Coverage)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Doula recognized; attentive nursing care",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Wide family suites; respectful photo policy",
+    "tip": "Davis County's premier Level III NICU facility with labor suites and spa-style comfort amenities.",
+    "url": "https://www.commonspirit.org/locations/holy-cross-hospital-davis"
+  },
+  {
+    "id": "lakeview",
+    "name": "Lakeview Hospital",
+    "system": "MountainStar Healthcare",
+    "city": "Bountiful, UT",
+    "county": "Davis County",
+    "isBirthCenter": false,
+    "nicu": "Level II (5 Beds)",
+    "tubs": "Soaking Tubs in Rooms",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Low Cesarean Focus)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Supportive post-birth bonding; doula welcoming",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Intimate community setting; good natural light",
+    "tip": "Boutique southern Davis County hospital with low cesarean rates and family-centered post-birth bonding.",
+    "url": "https://mountainstar.com/locations/lakeview-hospital"
+  },
+  {
+    "id": "mckaydee",
+    "name": "McKay-Dee Hospital",
+    "system": "Intermountain Health",
+    "city": "Ogden, UT",
+    "county": "Weber County",
+    "isBirthCenter": false,
+    "nicu": "Level III (32 Beds)",
+    "tubs": "Labor Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Northern Utah TOLAC Center)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Regional leader in birth care; doula advocates",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Comfortable spacious labor rooms",
+    "tip": "Northern Utah's regional referral hospital with robust neonatal and maternal emergency readiness.",
+    "url": "https://intermountainhealthcare.org/locations/mckay-dee-hospital"
+  },
+  {
+    "id": "ogdenregional",
+    "name": "Ogden Regional Medical Center",
+    "system": "MountainStar Healthcare",
+    "city": "Ogden, UT",
+    "county": "Weber County",
+    "isBirthCenter": false,
+    "nicu": "Level III (21 Beds)",
+    "tubs": "Labor Tubs Available",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (24/7 Dedicated In-House Team)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Experienced staff; family-oriented maternity",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Generous visitor policy; birth photography welcomed",
+    "tip": "Spacious maternity center in Weber County with dedicated Level III NICU care.",
+    "url": "https://mountainstar.com/locations/ogden-regional-medical-center"
+  },
+  {
+    "id": "parkcity",
+    "name": "Park City Hospital",
+    "system": "Intermountain Health",
+    "city": "Park City, UT",
+    "county": "Summit County",
+    "isBirthCenter": false,
+    "nicu": "Level I / Stabilization",
+    "tubs": "Deep Soaking Tubs",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Low-Risk TOLAC Candidates)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Boutique luxury birth feel; high nurse-to-patient ratio",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2605",
+    "photoNote": "Panoramic alpine light; magazine-worthy rooms",
+    "tip": "Resort-style mountain birth setting with quiet, unhurried care and stunning alpine views.",
+    "url": "https://intermountainhealthcare.org/locations/park-city-hospital"
+  },
+  {
+    "id": "logan",
+    "name": "Logan Regional Hospital",
+    "system": "Intermountain Health",
+    "city": "Logan, UT",
+    "county": "Cache County",
+    "isBirthCenter": false,
+    "nicu": "Level II (23 Beds)",
+    "tubs": "Labor Tubs in Suites",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Cache Valley TOLAC Leader)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2606",
+    "doulaNote": "Community favorite; warm supportive environment",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Natural daylight rooms; peaceful postpartum",
+    "tip": "The primary maternity anchor for Cache Valley and northern Utah families.",
+    "url": "https://intermountainhealthcare.org/locations/logan-regional-hospital"
+  },
+  {
+    "id": "stgeorge",
+    "name": "St. George Regional Hospital",
+    "system": "Intermountain Health",
+    "city": "St. George, UT",
+    "county": "Washington County",
+    "isBirthCenter": false,
+    "nicu": "Level III (20 Beds)",
+    "tubs": "Soaking Tubs Available",
+    "waterBirth": false,
+    "vbac": "Allows VBAC (Southern Utah TOLAC Hub)",
+    "vbacAllowed": true,
+    "doulaScore": "\u2605\u2605\u2605\u2605\u2605",
+    "doulaNote": "Warm southwest team; doula supportive",
+    "photoScore": "\u2605\u2605\u2605\u2605\u2606",
+    "photoNote": "Level III NICU backup; family-centered guidelines",
+    "tip": "Southern Utah's major regional hospital with advanced Level III NICU coverage.",
+    "url": "https://intermountainhealthcare.org/locations/st-george-regional-hospital"
+  }
+];
+    const questions = [
+  {
+    "title": "Is this your 1st baby, or have you given birth before?",
+    "subtitle": "Your previous birth experience shapes the support & facilities best suited for your delivery.",
+    "key": "history",
+    "options": [
+      {
+        "label": "First Baby (1st-Time Mama)",
+        "desc": "Seeking gentle guidance, epidural reassurance, and full care team.",
+        "val": "first_time"
+      },
+      {
+        "label": "Experienced Mama (2nd+ Baby)",
+        "desc": "Seeking calm efficiency, deep tub comfort, and personal autonomy.",
+        "val": "experienced"
+      },
+      {
+        "label": "Planning a VBAC (Vaginal Birth After Cesarean)",
+        "desc": "Seeking a hospital or midwife with proven VBAC success & active TOLAC support.",
+        "val": "vbac"
+      },
+      {
+        "label": "Multiple / High-Risk Pregnancy",
+        "desc": "Seeking Level III/IV NICU & specialized maternal-fetal medicine.",
+        "val": "high_risk"
+      }
+    ]
+  },
+  {
+    "title": "What setting feels most reassuring for your birth?",
+    "subtitle": "Where you feel safest relaxing into labor.",
+    "key": "setting",
+    "options": [
+      {
+        "label": "High-Tech Hospital (Level III NICU)",
+        "desc": "Full peace-of-mind, 24/7 in-house surgical and NICU backup.",
+        "val": "hosp_high"
+      },
+      {
+        "label": "Cozy Community Hospital",
+        "desc": "Gentle, personal atmosphere with a modern medical safety net.",
+        "val": "hosp_comm"
+      },
+      {
+        "label": "Free-standing Birth Center",
+        "desc": "Midwife-led, homelike birth suites, and natural water birth.",
+        "val": "birth_center"
+      },
+      {
+        "label": "Home Birth in My Own Space",
+        "desc": "Private midwife, uninterrupted autonomy, no hospital rush.",
+        "val": "home_birth"
+      }
+    ]
+  },
+  {
+    "title": "What labor & pain management tools are on your wish list?",
+    "subtitle": "How do you envision coping through contractions?",
+    "key": "pain_mgmt",
+    "options": [
+      {
+        "label": "Epidural Available on Demand",
+        "desc": "Access to anesthesiologist for immediate medical relief.",
+        "val": "epidural"
+      },
+      {
+        "label": "Deep Labor Soaking Tub / Water Birth",
+        "desc": "Hydrotherapy pain relief or water delivery in private suite.",
+        "val": "tub"
+      },
+      {
+        "label": "Freedom to Move & Wireless Monitoring",
+        "desc": "Telemetry monitors so you can walk, squat, and change positions.",
+        "val": "wireless"
+      },
+      {
+        "label": "Nitrous Oxide (Laughing Gas)",
+        "desc": "Takes the edge off contractions without a spinal block.",
+        "val": "nitrous"
+      }
+    ]
+  },
+  {
+    "title": "What are your priorities for Doula & Photography support?",
+    "subtitle": "Hospital policies vary heavily across Utah.",
+    "key": "support",
+    "options": [
+      {
+        "label": "I want both a Doula & Birth Photographer",
+        "desc": "I want continuous labor support and complete documentary coverage.",
+        "val": "doula_photo"
+      },
+      {
+        "label": "I want C-Section / OR Photo Flexibility",
+        "desc": "Photographer permitted in recovery or operating room if needed.",
+        "val": "csection_photo"
+      },
+      {
+        "label": "I want a quiet, intimate unhurried space",
+        "desc": "Dim lighting, minimal staff interruption, uninterrupted golden hour.",
+        "val": "intimate"
+      },
+      {
+        "label": "Standard hospital policies are fine",
+        "desc": "Standard hospital birth support without special exemptions.",
+        "val": "standard"
+      }
+    ]
+  },
+  {
+    "title": "Where along the Wasatch Front are you located?",
+    "subtitle": "Distance matters when active labor contractions begin!",
+    "key": "location",
+    "options": [
+      {
+        "label": "Utah County (Provo, Orem, Lehi, AF)",
+        "desc": "Central or North Utah Valley corridor.",
+        "val": "utah_county"
+      },
+      {
+        "label": "South Utah County (Payson, Springville, Spanish Fork)",
+        "desc": "South valley corridor.",
+        "val": "utah_south"
+      },
+      {
+        "label": "Salt Lake County (Sandy, Draper, Murray, SLC)",
+        "desc": "Salt Lake valley metro area.",
+        "val": "slc_county"
+      },
+      {
+        "label": "Davis / Weber / Summit / St. George",
+        "desc": "North corridor, mountain towns, or southern Utah.",
+        "val": "north_summit"
+      }
+    ]
+  }
+];
+    const TOTAL_STEPS = 6;
+    let currentStep = 0;
+    const userAnswers = {};
+    let clientData = { name: '', email: '', dueDate: '', phone: '' };
+
+    function abmRenderStep() {
+      const isLeadStep = currentStep === 5;
+      document.getElementById('abm-progress-bar').style.width = `${((currentStep + 1) / TOTAL_STEPS) * 100}%`;
+      document.getElementById('abm-btn-back').style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+
+      if (!isLeadStep) {
+        const q = questions[currentStep];
+        document.getElementById('abm-step-label').textContent = `Question ${currentStep + 1} of 5`;
+        document.getElementById('abm-question-text').textContent = q.title;
+        document.getElementById('abm-question-sub').textContent = q.subtitle;
+        document.getElementById('abm-options-container').style.display = 'grid';
+        document.getElementById('abm-lead-step-container').style.display = 'none';
+
+        const container = document.getElementById('abm-options-container');
+        container.innerHTML = '';
+        q.options.forEach(opt => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'option-btn';
+          if (userAnswers[q.key] === opt.val) {
+            btn.classList.add('selected');
+          }
+          btn.onclick = () => abmSelectOption(q.key, opt.val);
+          btn.innerHTML = `
+            <span class="option-label">${opt.label}</span>
+            <span class="option-desc">${opt.desc}</span>
+          `;
+          container.appendChild(btn);
+        });
+
+        document.getElementById('abm-btn-next').disabled = !userAnswers[q.key];
+        document.getElementById('abm-btn-next').textContent = currentStep === 4 ? 'Continue to Results →' : 'Next Question →';
+      } else {
+        document.getElementById('abm-step-label').textContent = 'Step 6 of 6 · Delivery Details';
+        document.getElementById('abm-question-text').textContent = 'Where should we send your personalized results?';
+        document.getElementById('abm-question-sub').textContent = 'Enter your details to reveal your best hospital match immediately and receive Cassidee’s printable Utah Hospital Packing Checklist & VBAC Guide.';
+        document.getElementById('abm-options-container').style.display = 'none';
+        document.getElementById('abm-lead-step-container').style.display = 'block';
+        document.getElementById('abm-btn-next').textContent = 'Reveal My Best Match & Send My Guide ✨';
+        abmValidateLeadStep();
+      }
+    }
+
+    function abmSelectOption(key, val) {
+      userAnswers[key] = val;
+      abmRenderStep();
+    }
+
+    function abmValidateLeadStep() {
+      if (currentStep !== 5) return;
+      const name = document.getElementById('abm-client-name').value.trim();
+      const email = document.getElementById('abm-client-email').value.trim();
+      const dueDate = document.getElementById('abm-client-due-date').value.trim();
+      const isValidEmail = email.includes('@') && email.includes('.');
+      const isValid = name.length >= 2 && isValidEmail && dueDate.length >= 2;
+      document.getElementById('abm-btn-next').disabled = !isValid;
+    }
+
+    function abmNextQuestion() {
+      if (currentStep < 5) {
+        currentStep++;
+        abmRenderStep();
+      } else {
+        clientData.name = document.getElementById('abm-client-name').value.trim();
+        clientData.email = document.getElementById('abm-client-email').value.trim();
+        clientData.dueDate = document.getElementById('abm-client-due-date').value.trim();
+        clientData.phone = document.getElementById('abm-client-phone').value.trim();
+        abmCalculateAndShowResults();
+      }
+    }
+
+    function abmPrevQuestion() {
+      if (currentStep > 0) {
+        currentStep--;
+        abmRenderStep();
+      }
+    }
+
+    function abmCalculateAndShowResults() {
+      document.getElementById('abm-quiz-card').style.display = 'none';
+      document.getElementById('abm-progress-bar-container').style.display = 'none';
+      document.getElementById('abm-result-view').style.display = 'block';
+
+      document.getElementById('abm-banner-title-text').textContent = `Personalized Match Prepared for ${clientData.name}`;
+      document.getElementById('abm-banner-sub-text').innerHTML = `
+        Calculated for your <strong>${clientData.dueDate}</strong> due date. A copy of this full recommendation & Cassidee’s Utah Hospital Packing Checklist has been sent to <strong>${clientData.email}</strong>.
+      `;
+
+      let primaryId = 'uvh';
+      let runnerUpId = 'imc';
+      const isVBAC = userAnswers.history === 'vbac';
+
+      if (userAnswers.setting === 'birth_center' || (userAnswers.pain_mgmt === 'tub' && userAnswers.setting !== 'hosp_high')) {
+        if (userAnswers.location === 'utah_county' || userAnswers.location === 'utah_south') {
+          primaryId = 'freya';
+          runnerUpId = 'utahbirthsuites';
+        } else {
+          primaryId = 'birthcenter';
+          runnerUpId = 'wasatch';
+        }
+      } else if (isVBAC) {
+        if (userAnswers.location === 'utah_county') {
+          primaryId = 'uvh';
+          runnerUpId = 'timpanogos';
+        } else if (userAnswers.location === 'utah_south') {
+          primaryId = 'uvh';
+          runnerUpId = 'spanish_fork';
+        } else if (userAnswers.location === 'slc_county') {
+          primaryId = 'imc';
+          runnerUpId = 'uofu';
+        } else {
+          primaryId = 'mckaydee';
+          runnerUpId = 'davis';
+        }
+      } else if (userAnswers.location === 'utah_south') {
+        primaryId = userAnswers.setting === 'hosp_high' ? 'uvh' : 'spanish_fork';
+        runnerUpId = 'mountainview';
+      } else if (userAnswers.location === 'utah_county') {
+        primaryId = userAnswers.setting === 'hosp_comm' ? 'afh' : 'uvh';
+        runnerUpId = userAnswers.setting === 'hosp_comm' ? 'uvh' : 'timpanogos';
+      } else if (userAnswers.location === 'slc_county') {
+        if (userAnswers.setting === 'hosp_high') {
+          primaryId = 'imc';
+          runnerUpId = 'uofu';
+        } else {
+          primaryId = 'lonepeak';
+          runnerUpId = 'stmarks';
+        }
+      } else if (userAnswers.location === 'north_summit') {
+        primaryId = 'layton';
+        runnerUpId = 'mckaydee';
+      }
+
+      const primary = allVenues.find(v => v.id === primaryId) || allVenues[0];
+      const secondary = allVenues.find(v => v.id === runnerUpId) || allVenues[1];
+
+      const container = document.getElementById('abm-match-cards-container');
+      container.innerHTML = `
+        <div class="hospital-card primary-match">
+          <span class="primary-badge">★ Your #1 Match (98% Compatibility)</span>
+          <h3 class="hospital-name">${primary.name}</h3>
+          <p class="hospital-city">${primary.city} · ${primary.system}</p>
+          <a href="${primary.url}" target="_blank" rel="noopener" class="hospital-site-link">Visit Official L&D Page ↗</a>
+          <div class="spec-badges">
+            <span class="spec-tag highlight">${primary.nicu}</span>
+            <span class="spec-tag highlight">${primary.tubs}</span>
+            <span class="spec-tag ${primary.vbacAllowed ? 'vbac-tag' : ''}">${primary.vbacAllowed ? '✓ Allows VBAC' : 'VBAC: Consult Midwife'}</span>
+            <span class="spec-tag">Doula: ${primary.doulaScore}</span>
+            <span class="spec-tag">Photo: ${primary.photoScore}</span>
+          </div>
+          <ul class="hospital-pros">
+            <li><strong>VBAC:</strong> ${primary.vbac}</li>
+            <li><strong>Doula:</strong> ${primary.doulaNote}</li>
+            <li><strong>Photography:</strong> ${primary.photoNote}</li>
+          </ul>
+          <div class="cassidee-tip">
+            <strong>Cassidee’s Insider Doula & Photo Tip:</strong>
+            ${isVBAC ? "VBAC Focus: Continuous doula support increases trial of labor success rates by over 25%. " + primary.tip : primary.tip}
+          </div>
+        </div>
+
+        <div class="hospital-card">
+          <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Runner-Up Alternative</span>
+          <h4 class="hospital-name" style="margin-top: 6px;">${secondary.name}</h4>
+          <p class="hospital-city">${secondary.city} · ${secondary.system}</p>
+          <a href="${secondary.url}" target="_blank" rel="noopener" class="hospital-site-link">Visit Official L&D Page ↗</a>
+          <div class="spec-badges">
+            <span class="spec-tag">${secondary.nicu}</span>
+            <span class="spec-tag">${secondary.tubs}</span>
+            <span class="spec-tag ${secondary.vbacAllowed ? 'vbac-tag' : ''}">${secondary.vbacAllowed ? '✓ Allows VBAC' : 'VBAC: Consult'}</span>
+            <span class="spec-tag">Doula: ${secondary.doulaScore}</span>
+          </div>
+          <ul class="hospital-pros">
+            <li>${secondary.vbac}</li>
+            <li>${secondary.doulaNote}</li>
+          </ul>
+          <div class="cassidee-tip">
+            <strong>Why Consider It:</strong>
+            ${secondary.tip}
+          </div>
+        </div>
+      `;
+
+      document.getElementById('abm-consult-title').textContent = `Planning to deliver at ${primary.name}?`;
+      document.getElementById('abm-consult-sub').textContent = `Cassidee has photographed and supported births at ${primary.name} and across Utah. Let’s chat about your birth vision and check on-call availability for ${clientData.dueDate}.`;
+
+      const contactUrl = `https://andiphotoandfilm.com/contact/?name=${encodeURIComponent(clientData.name)}&email=${encodeURIComponent(clientData.email)}&due_date=${encodeURIComponent(clientData.dueDate)}&hospital=${encodeURIComponent(primary.name)}`;
+      const btnLink = document.getElementById('abm-consult-btn-link');
+      if (btnLink) btnLink.href = contactUrl;
+    }
+
+    function abmRestartQuiz() {
+      currentStep = 0;
+      document.getElementById('abm-quiz-card').style.display = 'block';
+      document.getElementById('abm-progress-bar-container').style.display = 'block';
+      document.getElementById('abm-result-view').style.display = 'none';
+      abmRenderStep();
+    }
+
+    function abmSwitchMode(mode) {
+      if (mode === 'quiz') {
+        document.getElementById('abm-quiz-wrapper').style.display = 'block';
+        document.getElementById('abm-compare-wrapper').style.display = 'none';
+        document.getElementById('abm-mode-quiz').classList.add('active');
+        document.getElementById('abm-mode-compare').classList.remove('active');
+      } else {
+        document.getElementById('abm-quiz-wrapper').style.display = 'none';
+        document.getElementById('abm-compare-wrapper').style.display = 'block';
+        document.getElementById('abm-mode-quiz').classList.remove('active');
+        document.getElementById('abm-mode-compare').classList.add('active');
+        abmRenderTable(allVenues);
+      }
+    }
+
+    let activeCountyFilter = 'All';
+    let activeSearchTerm = '';
+
+    function abmFilterCounty(county) {
+      activeCountyFilter = county;
+      const pills = document.querySelectorAll('#abm-filter-pills .filter-pill');
+      pills.forEach(p => {
+        p.classList.toggle('active', p.textContent.includes(county) || (county === 'All' && p.textContent.includes('All')));
+      });
+      abmApplyTableFilters();
+    }
+
+    function abmHandleTableSearch(val) {
+      activeSearchTerm = val.toLowerCase().trim();
+      abmApplyTableFilters();
+    }
+
+    function abmApplyTableFilters() {
+      let filtered = allVenues.filter(v => {
+        let matchesCounty = true;
+        if (activeCountyFilter === 'Utah County') matchesCounty = v.county.includes('Utah');
+        else if (activeCountyFilter === 'Salt Lake County') matchesCounty = v.county.includes('Salt Lake');
+        else if (activeCountyFilter === 'Davis & Weber') matchesCounty = v.county.includes('Davis') || v.county.includes('Weber');
+        else if (activeCountyFilter === 'Birth Center') matchesCounty = v.isBirthCenter;
+        else if (activeCountyFilter === 'Allows VBAC') matchesCounty = v.vbacAllowed;
+
+        let matchesSearch = true;
+        if (activeSearchTerm) {
+          matchesSearch = v.name.toLowerCase().includes(activeSearchTerm) ||
+                          v.city.toLowerCase().includes(activeSearchTerm) ||
+                          v.system.toLowerCase().includes(activeSearchTerm) ||
+                          v.vbac.toLowerCase().includes(activeSearchTerm);
+        }
+        return matchesCounty && matchesSearch;
+      });
+      abmRenderTable(filtered);
+    }
+
+    function abmRenderTable(list) {
+      const tbody = document.getElementById('abm-table-body');
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding: 24px; color: #888;">No facilities match your search. Try clearing filters.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(v => `
+        <tr>
+          <td>
+            <a href="${v.url}" target="_blank" rel="noopener" class="hospital-name-link">${v.name} ↗</a><br>
+            <span style="font-size: 11px; color: #888;">${v.system}</span>
+          </td>
+          <td>
+            ${v.city}<br>
+            <span style="font-size: 11px; color: #888;">${v.county}</span>
+          </td>
+          <td>
+            <span class="${v.vbacAllowed ? 'pill-vbac' : 'pill-vbac-midwife'}">${v.vbacAllowed ? '✓ Allows VBAC' : 'Case-by-Case'}</span><br>
+            <span class="vbac-sub">${v.vbac}</span>
+          </td>
+          <td>
+            <span style="font-size: 11.5px; font-weight: 600;">${v.nicu}</span>
+          </td>
+          <td>
+            <span class="${v.waterBirth ? 'pill-water' : 'pill-check'}">${v.tubs}</span>
+          </td>
+          <td>
+            <span class="stars">${v.doulaScore}</span> Doula<br>
+            <span class="stars">${v.photoScore}</span> Photo
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function abmHandleTableLeadSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('abm-table-lead-name').value.trim();
+      const email = document.getElementById('abm-table-lead-email').value.trim();
+      document.getElementById('abm-table-lead-success').style.display = 'block';
+      document.getElementById('abm-table-lead-btn').disabled = true;
+      document.getElementById('abm-table-lead-btn').textContent = '✓ Sent';
+    }
+
+    // Init
+    abmRenderStep();
+  </script>
+
+  
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Utah Maternity & Birth Resource Guide</h4>
+      <p>An independent, community-driven resource helping Utah mothers make informed, empowered birth choices. Featuring non-toxic packing essentials with 1-click Amazon Cart sync, an Apple-inspired facility matcher, and a statewide directory of birth centers, midwives, doulas, and photographers.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Mothers' Resources</h4>
+      <ul class="footer-links">
+        <li><a href="quiz.html">✨ Birth Choice Match Quiz</a></li>
+        <li><a href="checklist.html">🌿 Natural Packing Checklist</a></li>
+        <li><a href="directory.html">🏥 Statewide Provider Directory</a></li>
+        <li><a href="https://www.amazon.com/shop/andiphotoandfilm" target="_blank" rel="noopener">⭐ Curated Amazon Storefront</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For Birth Professionals</h4>
+      <ul class="footer-links">
+        <li><a href="advertise.html">Claim Free Basic Listing</a></li>
+        <li><a href="advertise.html">Featured Pro Subscription ($39/mo)</a></li>
+        <li><a href="advertise.html">Quiz Spotlight Exclusivity ($89/mo)</a></li>
+        <li><a href="mailto:andiphotofilm@gmail.com">Contact Andi Photo + Film</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Utah Maternity & Birth Guide • Andi Photo + Film LLC. All rights reserved.</div>
+    <div>Affiliate Disclosure: We earn qualifying commissions from Amazon affiliate links at no extra cost to you.</div>
+  </div>
+</footer>
+
+</body>
+</html>

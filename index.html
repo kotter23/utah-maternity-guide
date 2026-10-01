@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Utah Maternity & Birth Guide | Andi Photo + Film</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --site-bg: #FAF8F5;
+      --site-card: #FFFFFF;
+      --site-dark: #2B2623;
+      --site-muted: #6E6761;
+      --site-terra: #B66D4F;
+      --site-terra-dark: #9E5B3F;
+      --site-terra-light: #F8ECE5;
+      --site-olive: #5B6F56;
+      --site-olive-light: #EEF2EC;
+      --site-border: #ECE6DE;
+      --site-shadow: 0 6px 20px rgba(43, 38, 35, 0.05);
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background-color: var(--site-bg);
+      color: var(--site-dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .site-header {
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1.5px solid var(--site-border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 20px;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-brand {
+      text-decoration: none;
+      color: var(--site-dark);
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-sub {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--site-terra);
+    }
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--site-dark);
+      line-height: 1.2;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--site-muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: var(--site-dark);
+      background: #ECE5DC;
+    }
+    .nav-cta {
+      background: var(--site-terra);
+      color: #fff !important;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 3px 10px rgba(182, 109, 79, 0.25);
+    }
+    .nav-cta:hover {
+      background: var(--site-terra-dark);
+      transform: translateY(-1px);
+    }
+    .site-footer {
+      background: #231F1D;
+      color: #ECE5DC;
+      padding: 48px 20px 32px;
+      margin-top: 60px;
+      border-top: 1px solid #3A3430;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media(min-width: 768px) {
+      .footer-inner {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #FFF;
+    }
+    .footer-col p {
+      font-size: 13px;
+      color: #B5ACA3;
+      line-height: 1.6;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links a {
+      color: #ECE5DC;
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #FFA585;
+    }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 36px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #3A3430;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: #8C827A;
+    }
+  </style>
+
+  <style>
+    .hero {
+      text-align: center;
+      padding: 64px 20px 48px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--site-olive);
+      background: var(--site-olive-light);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(34px, 5.5vw, 54px);
+      font-weight: 500;
+      line-height: 1.18;
+      margin-bottom: 18px;
+      color: var(--site-dark);
+    }
+    .hero-subtitle {
+      font-size: clamp(16px, 2vw, 18.5px);
+      color: var(--site-muted);
+      max-width: 700px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-btn {
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-btn.primary {
+      background: var(--site-terra);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(182, 109, 79, 0.3);
+    }
+    .hero-btn.primary:hover {
+      background: var(--site-terra-dark);
+      transform: translateY(-2px);
+    }
+    .hero-btn.secondary {
+      background: #FFF;
+      color: var(--site-dark);
+      border: 1.5px solid var(--site-border);
+      box-shadow: var(--site-shadow);
+    }
+    .hero-btn.secondary:hover {
+      border-color: var(--site-terra);
+      transform: translateY(-2px);
+    }
+
+    /* Pillars Grid */
+    .pillars-section {
+      max-width: 1160px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media(min-width: 768px) {
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .pillar-card {
+      background: #FFF;
+      border: 1.5px solid var(--site-border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: var(--site-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(43, 38, 35, 0.08);
+      border-color: #D6CBC0;
+    }
+    .pillar-icon {
+      font-size: 36px;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .pillar-tag {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .tag-quiz { background: #FDEED9; color: #B7791F; }
+    .tag-checklist { background: #E8F5E9; color: #2E7D32; }
+    .tag-dir { background: #E1F5FE; color: #0277BD; }
+    .tag-pro { background: #F3E5F5; color: #7B1FA2; }
+
+    .pillar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .pillar-desc {
+      font-size: 14px;
+      color: var(--site-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .pillar-link {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--site-terra);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .pillar-link:hover {
+      color: var(--site-terra-dark);
+      gap: 10px;
+    }
+
+    /* Trust banner */
+    .trust-banner {
+      background: #F4EFEB;
+      border-radius: 18px;
+      border: 1px solid var(--site-border);
+      padding: 32px 24px;
+      text-align: center;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .trust-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .stat-item strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--site-terra);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-item span {
+      font-size: 13px;
+      color: var(--site-muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-sub">Curated by Andi Photo + Film</span>
+      <span class="brand-title">Utah Maternity & Birth Guide</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="quiz.html" class="nav-item ">Birth Place Quiz</a>
+      <a href="checklist.html" class="nav-item ">Packing Checklist</a>
+      <a href="directory.html" class="nav-item ">Provider Directory</a>
+      <a href="advertise.html" class="nav-cta">Advertise / Get Listed ✨</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="hero">
+    <div class="hero-badge">Curated by Andi Photo + Film • Statewide Resource</div>
+    <h1 class="hero-title">Your Mindful Guide to Birth & Maternity in Utah</h1>
+    <p class="hero-subtitle">
+      Whether you are dreaming of a water birth at an accredited birth center, delivering with an OB/midwife at a premier hospital, or planning a peaceful home birth, explore our interactive tools and verified providers.
+    </p>
+    <div class="hero-actions">
+      <a href="quiz.html" class="hero-btn primary">✨ Take Birth Place Quiz</a>
+      <a href="checklist.html" class="hero-btn secondary">🌿 Natural Packing Checklist</a>
+      <a href="directory.html" class="hero-btn secondary">🏥 Explore 50+ Providers</a>
+    </div>
+  </section>
+
+  <section class="pillars-section">
+    <div class="pillars-grid">
+      <!-- Pillar 1: Quiz -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-icon">🧭</span><br>
+          <span class="pillar-tag tag-quiz">Apple-Inspired Matcher</span>
+          <h2 class="pillar-title">Which Utah Birth Place Fits You?</h2>
+          <p class="pillar-desc">
+            Answer 5 quick questions about pain management, atmosphere, partner support, and birth location. Instantly receive an algorithmic match across all 28 Utah hospitals, 6 freestanding birth centers, and licensed home birth midwives.
+          </p>
+        </div>
+        <a href="quiz.html" class="pillar-link">Start 2-Minute Match Quiz &rarr;</a>
+      </div>
+
+      <!-- Pillar 2: Checklist -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-icon">🌿</span><br>
+          <span class="pillar-tag tag-checklist">1-Click Amazon Cart Sync</span>
+          <h2 class="pillar-title">Natural & Non-Toxic Birth Packing Checklist</h2>
+          <p class="pillar-desc">
+            Say goodbye to synthetic hospital plastics and petroleum creams. Our holistic checklist features 28 clean essentials (organic cotton pads, herbal sitz soaks, Silverette cups, Utah electrolytes) with a smart progress bar and 1-click Amazon Cart sync.
+          </p>
+        </div>
+        <a href="checklist.html" class="pillar-link">Open Packing Checklist &rarr;</a>
+      </div>
+
+      <!-- Pillar 3: Directory -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-icon">🤍</span><br>
+          <span class="pillar-tag tag-dir">Statewide Directory</span>
+          <h2 class="pillar-title">50+ Utah Hospitals, Birth Centers & Birth Pros</h2>
+          <p class="pillar-desc">
+            Filter by county (Utah, Salt Lake, Davis, Weber, Washington, Iron), facility type, VBAC policies, labor soaking tubs, and NICU levels. Includes direct contact links for licensed midwives and documentary birth photographers.
+          </p>
+        </div>
+        <a href="directory.html" class="pillar-link">Browse Full Directory &rarr;</a>
+      </div>
+
+      <!-- Pillar 4: For Providers -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-icon">📢</span><br>
+          <span class="pillar-tag tag-pro">For Birth Professionals</span>
+          <h2 class="pillar-title">Advertise & Get Listed in Front of Utah Mothers</h2>
+          <p class="pillar-desc">
+            Are you a licensed midwife, birth doula, birth photographer, or birth center director? Claim your basic listing for free, or upgrade to Featured Pro ($39/mo) or Quiz Exclusive Spotlight ($89/mo) with automated badge verification.
+          </p>
+        </div>
+        <a href="advertise.html" class="pillar-link">View Listing Options & Apply &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pillars-section">
+    <div class="trust-banner">
+      <h3 style="font-family:'Playfair Display',serif; font-size:22px; margin-bottom:6px;">Built for Utah Expecting Families</h3>
+      <p style="font-size:14px; color:var(--site-muted); max-width:640px; margin:0 auto;">
+        Real, unvarnished insight from local birth professionals, doulas, and photographers who attend deliveries across Utah's leading hospitals and home birth practices.
+      </p>
+      <div class="trust-stats">
+        <div class="stat-item">
+          <strong>50+</strong>
+          <span>Facilities & Providers</span>
+        </div>
+        <div class="stat-item">
+          <strong>28</strong>
+          <span>Clean Packing Essentials</span>
+        </div>
+        <div class="stat-item">
+          <strong>10</strong>
+          <span>Utah Counties Covered</span>
+        </div>
+        <div class="stat-item">
+          <strong>100%</strong>
+          <span>Holistic & Clean Focused</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Utah Maternity & Birth Resource Guide</h4>
+      <p>An independent, community-driven resource helping Utah mothers make informed, empowered birth choices. Featuring non-toxic packing essentials with 1-click Amazon Cart sync, an Apple-inspired facility matcher, and a statewide directory of birth centers, midwives, doulas, and photographers.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Mothers' Resources</h4>
+      <ul class="footer-links">
+        <li><a href="quiz.html">✨ Birth Choice Match Quiz</a></li>
+        <li><a href="checklist.html">🌿 Natural Packing Checklist</a></li>
+        <li><a href="directory.html">🏥 Statewide Provider Directory</a></li>
+        <li><a href="https://www.amazon.com/shop/andiphotoandfilm" target="_blank" rel="noopener">⭐ Curated Amazon Storefront</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For Birth Professionals</h4>
+      <ul class="footer-links">
+        <li><a href="advertise.html">Claim Free Basic Listing</a></li>
+        <li><a href="advertise.html">Featured Pro Subscription ($39/mo)</a></li>
+        <li><a href="advertise.html">Quiz Spotlight Exclusivity ($89/mo)</a></li>
+        <li><a href="mailto:andiphotofilm@gmail.com">Contact Andi Photo + Film</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Utah Maternity & Birth Guide • Andi Photo + Film LLC. All rights reserved.</div>
+    <div>Affiliate Disclosure: We earn qualifying commissions from Amazon affiliate links at no extra cost to you.</div>
+  </div>
+</footer>
+
+</body>
+</html>

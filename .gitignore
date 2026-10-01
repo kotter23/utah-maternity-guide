@@ -1,0 +1,10 @@
+# .gitignore
+# Hugo build output
+public/
+# OS files
+.DS_Store
+Thumbs.db
+# Node_modules if any
+node_modules/
+# Netlify cache
+.cache/
